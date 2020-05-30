@@ -11,6 +11,7 @@ pool:
 
 variables:
   projectPath: 'Source/Web'
+  projectFilePath: 'Source/Web/Web.csproj'
   coreCliVersion: 3.1.300
 
 
@@ -20,9 +21,17 @@ steps:
   displayName: 'Installing NetCore version $(coreCliVersion)...'
   inputs:
     version: $(coreCliVersion)
+
+- task: DotNetCoreCLI@2
+  displayName: 'Building Core ...'
+  inputs:
+    command: build
+    projects: $(projectPath)
+    configuration: 'Release'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
     publishWebProjects: true
     arguments: '--configuration Release'
-    workingDirectory: '$(projectPath)/**.csproj'
+    workingDirectory: $(projectPath)
