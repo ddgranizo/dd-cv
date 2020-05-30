@@ -1,0 +1,8 @@
+﻿<div class="container has-text-centered" style="max-width: 600px">
+        @ChildContent
+</div>
+
+@code{
+
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}
