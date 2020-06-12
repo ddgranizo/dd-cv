@@ -1,6 +1,16 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 
+
+.loading-bar-container {
+    position: fixed;
+    width: 80%;
+    top: 50%;
+    left: 10%;
+}
+
+​
+
 .img-social-network {
     width: 100px;
     height: 100px;

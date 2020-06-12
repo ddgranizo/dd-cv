@@ -1,10 +1,10 @@
 {
-  "name": "Web",
-  "short_name": "Web",
+  "name": "DDG Portfolio",
+  "short_name": "DDG Portfolio",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#03173d",
+  "theme_color": "#00d1b2",
   "icons": [
     {
       "src": "icon-512.png",
